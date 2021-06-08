@@ -30,5 +30,16 @@ int main(){
   // unsigned int: Same size as signed version
   // long double : Not less then double 
 
+  // Print the size of an int 
+
+  cout << "Size of int " << sizeof(myAge)
+      << endl;
+
+  // Print the largest int possible 
+
+  int largestInt = 2147483647;
+
+  cout << "Largest int " << largestInt << endl;
+
   return 0; 
 }
