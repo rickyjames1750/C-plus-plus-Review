@@ -65,6 +65,10 @@ int main(){
   // we can see here it is important to use braces all the time or else it will result in a wrong answer possibly like below
   cout << "(1 + 2 -3) * 2 = " << (1 + 2 - 3) * 2 << endl;
 
+  cout << "4 / 5 = " << 4 / 5 << endl; 
+  // performing casting 
+  cout << "4 / 5 = " << (float) 4 / 5 << endl; 
+
 
   return 0; 
 }
