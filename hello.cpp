@@ -58,5 +58,13 @@ int main(){
 
   five += 6; five = five + 6;
 
+  // Order of Operations states * and / is performed before any + and - (similar to pemdas in pre-school math)
+  
+  // Correct order of operations
+  cout << "1 + 2 - 3 * 2 = " << 1 + 2 - 3 * 2 << endl;
+  // we can see here it is important to use braces all the time or else it will result in a wrong answer possibly like below
+  cout << "(1 + 2 -3) * 2 = " << (1 + 2 - 3) * 2 << endl;
+
+
   return 0; 
 }
