@@ -56,5 +56,7 @@ int main(){
   cout << "5-- = " << five-- << endl;
   cout << "--5 = " << --five << endl;
 
+  five += 6; five = five + 6;
+
   return 0; 
 }
