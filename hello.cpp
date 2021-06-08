@@ -41,5 +41,12 @@ int main(){
 
   cout << "Largest int " << largestInt << endl;
 
+  // Arithmetic 
+  cout << "5 + 2 = " << 5+2 << endl;
+  cout << "5 - 2 = " << 5-2 << endl;
+  cout << "5 * 2 = " << 5*2 << endl;
+  cout << "5 / 2 = " << 5/2 << endl;
+  cout << "5 % 2 = " << 5%2 << endl;
+
   return 0; 
 }
