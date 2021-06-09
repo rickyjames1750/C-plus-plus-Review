@@ -113,6 +113,26 @@ switch(greetingOption){
     cout << "Hello" << endl; 
 }
 
-  return 0; 
+// Ternary Operator 
+//variable = (condition) ? true : false
+//int largestNum = (5>2) ? 5 : 2;
+
+// Arrays 
+
+int myFavNums[5];
+
+int badNums[5] = {4, 13, 14, 24, 34};
+
+cout << "Bad Number 1: " << badNums[0] << endl;
+
+char myName[5][6] = {{'R', 'i', 'c', 'k', 'y'}, {'S', 'p', 'a', 'r', 'k', 's'}};
+
+cout << "2nd letter in 2nd array " << myName[1][1] << endl;
+
+myName[0][2] = 'e';
+
+cout << "New Value " << myName[0][2] << endl; 
+
+return 0; 
 
 }
