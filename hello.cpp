@@ -133,6 +133,22 @@ myName[0][2] = 'e';
 
 cout << "New Value " << myName[0][2] << endl; 
 
+// For loops 
+for(int i = 1; i <= 10; i++){
+
+  cout << i << endl; 
+}
+
+for(int j = 0; j < 5; j++) {
+
+  for(int y = 0; y < 5; y++){
+
+    cout << myName[j][y];
+
+    cout << endl;
+  }
+}
+
 return 0; 
 
 }
