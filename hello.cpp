@@ -173,12 +173,15 @@ while(index <= 10){
 string numberGuessed;
 int intNumberGuessed = 0;
 
+// Do While Loop 
 do {
 
   cout << "Guess between 1 and 10: ";
 
+  // User Input 
   getline(cin, numberGuessed);
 
+  // Convert string 
   intNumberGuessed = stod(numberGuessed);
 
   cout << intNumberGuessed << endl; 
