@@ -205,6 +205,61 @@ getline(cin, yourName);
 
 cout << "hello " << yourName << endl;
 
+
+// Double , from string to double 
+double eulersConstant = .57721;
+string eulerGuess;
+double eulerGuessDouble;
+
+cout << "What is Euler's Constant? ";
+getline(cin, eulerGuess);
+
+eulerGuessDouble = stod(eulerGuess);
+
+if(eulerGuessDouble == eulersConstant){
+
+  cout << "You are right" << endl;
+} else {
+
+  cout << "You are wrong" << endl;
+
+} 
+
+  cout << "Size of String " << eulerGuess.size() << endl;
+  cout << "Is string empty " << eulerGuess.empty() << endl;
+  cout << eulerGuess.append(" was your guess") << endl;
+
+  // Even more strings 
+  string dogString = "dog";
+  string catString = "cat";
+
+  cout << dogString.compare(catString) << endl;
+  cout << dogString.compare(dogString) << endl;
+  cout << catString.compare(dogString) << endl;
+
+  //Assigning values copies to another string 
+  string wholeName = yourName.assign(yourName);
+  cout << wholeName << endl;
+
+  string firstName = wholeName.assign(wholeName, 0, 5);
+  cout << firstName << endl;
+
+  int lastNameIndex = yourName.find("Sparks", 0);
+  cout << "Index for last name " << lastNameIndex << endl;
+
+  yourName.insert(5, " Justin");
+  cout << yourName << endl;
+
+  yourName.insert (5, " Justin");
+  cout << yourName << endl;
+
+  yourName.erase(6, 7);
+  cout << yourName << endl;
+
+  yourName.replace(6, 5, "Maximus");
+  cout << yourName << endl;
+
+
 return 0; 
 
 }
