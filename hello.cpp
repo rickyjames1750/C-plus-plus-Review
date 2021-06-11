@@ -176,7 +176,7 @@ int intNumberGuessed = 0;
 // Do While Loop 
 do {
 
-  cout << "Guess between 1 and 10: ";
+  cout << "Guess between 1 and 10 (hint = 4): ";
 
   // User Input 
   getline(cin, numberGuessed);
@@ -189,6 +189,21 @@ do {
 } while(intNumberGuessed != 4);
 
 cout << "You win" << endl; 
+
+// Strings 
+
+// The C way 
+char happyArray[6] = {'H', 'a', 'p', 'p', 'y', '\0'};
+// The C++ way 
+string birthdayString = " Birthday";
+
+cout << happyArray + birthdayString << endl;
+
+string yourName;
+cout << "What is your name ";
+getline(cin, yourName);
+
+cout << "hello " << yourName << endl;
 
 return 0; 
 
