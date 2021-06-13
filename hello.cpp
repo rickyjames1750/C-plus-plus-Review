@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <fstream>
 
 using namespace std; 
 
@@ -224,7 +226,6 @@ if(eulerGuessDouble == eulersConstant){
   cout << "You are wrong" << endl;
 
 } 
-
   cout << "Size of String " << eulerGuess.size() << endl;
   cout << "Is string empty " << eulerGuess.empty() << endl;
   cout << eulerGuess.append(" was your guess") << endl;
@@ -259,7 +260,24 @@ if(eulerGuessDouble == eulersConstant){
   yourName.replace(6, 5, "Maximus");
   cout << yourName << endl;
 
+  // Vectors 
+  vector <int> lotteryNumVect(10);
+
+  int lotteryNumArray[5] = {4, 13, 14, 24, 34};
+
+  lotteryNumVect.insert(lotteryNumVect.begin(), lotteryNumArray, lotteryNumArray+3);
+
+  lotteryNumVect.insert(lotteryNumVect.begin()+5, 44);
+
+  cout << lotteryNumVect.at(5) << endl; 
+
+  lotteryNumVect.push_back(64);
+
+  cout << "First Value " << lotteryNumVect.empty() << endl;
+
+  lotteryNumVect.pop_back(); 
 
 return 0; 
 
 }
+
