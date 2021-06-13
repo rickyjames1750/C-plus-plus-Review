@@ -277,6 +277,66 @@ if(eulerGuessDouble == eulersConstant){
 
   lotteryNumVect.pop_back(); 
 
+///// Note this was moved up inorder for it to fall under the int main scope and get the fstream include
+// FILE I/O
+
+string steveQuote = "A day without sunshine is like, you know, night";
+// This creates a output filestream 
+ofstream writer("stevequote.txt");
+
+// This will verify that the file stream object was built 
+if(! writer){
+
+  cout << "Error opening file" << endl;
+
+  // Signal that an error occurred 
+  return -1;
+} else {
+
+  // This will write the text to the file 
+  writer << steveQuote << endl;
+
+  // This will close the file 
+  writer.close();
+}
+
+ofstream writer2("stevequote.txt", ios::app);
+
+if(! writer2){
+
+  cout << "Error opening file" << endl;
+
+  // Signal that an error occurred
+  return -1;
+} else {
+
+  writer2 << "\n- Steve Martin" << endl;
+  writer2.close();
+} 
+
+char letter;
+
+// This will read characters from a file using an input file stream
+ifstream reader("stevequote.txt");
+
+if(! reader){
+
+  cout << "Error opening file" << endl; 
+  return -1;
+} else {
+  // Read each character from the stream until end of file
+  for(int i = 0; ! reader.eof(); i++){
+
+    // Get the next letter and output it 
+    reader.get(letter);
+    cout << letter;
+  }
+  
+  cout << endl; 
+  reader.close();
+}
+
+/////
   
 
 return 0;
