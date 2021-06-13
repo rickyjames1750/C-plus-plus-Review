@@ -277,7 +277,24 @@ if(eulerGuessDouble == eulersConstant){
 
   lotteryNumVect.pop_back(); 
 
-return 0; 
+  // Functions
+//int addNumbers(int firstNum, int secondNum = 0){
+    
+    //int combinedValue = firstNum + secondNum;
+ 
+		//return combinedValue;
+ 
+//}
+ 
+// An overloaded function has the same name, but different attributes
+//int addNumbers(int firstNum, int secondNum, int thirdNum){
+ 
+  //return firstNum + secondNum + thirdNum;
+ 
+//} 
 
+//int getFactorial 
+
+return 0;
 }
 
