@@ -336,11 +336,32 @@ if(! reader){
   reader.close();
 }
 
-/////
+//////// Exception Handling 
+
+  int number = 0; 
+
+  try{
+
+    if(number != 0){
+
+      cout << 2/number << endl; 
+    } else throw(number); 
+  }
+
+  catch(int number){
+
+    cout << number << " is not valid" << endl; 
+
+  }
+
+////////
   
 
 return 0;
 }
+
+////////////// OUTSIDE INT MAIN /////////////////
+
 
 // Functions
 int addNumbers(int firstNum, int secondNum = 0){
@@ -362,7 +383,15 @@ int getFactorial(int number){
 
   int sum;
   if(number == 1) sum = 1;
-  else sum = (getFactorial(number -1) * number);
+  else sum = getFactorial(number -1) * number;
   return sum; 
 } 
+
+int fact(){
+
+  cout << addNumbers(1) << endl; 
+  cout << addNumbers(1, 5, 6) << endl; 
+  cout << "The factorial of 3 is " << getFactorial(3) << endl;
+  return 0;
+}
 
