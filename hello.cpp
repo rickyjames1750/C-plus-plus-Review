@@ -5,6 +5,15 @@
 
 using namespace std; 
 
+void makeMeYoung(int* age){
+  cout << "I used to be " << *age << endl;
+  *age = 21; 
+}
+
+void actYourAge(int& age){
+  age = 22;
+}
+
 int main(){
   // This is a C++ comment  
 
@@ -17,7 +26,7 @@ int main(){
 
   bool isHappy = true;
 
-  int myAge = 39;
+  int myAge = 19;
 
   float favNum = 3.141592;
 
@@ -355,13 +364,41 @@ if(! reader){
   }
 
 // Pointers 
-  int myAge2 = 39;
-	char myGrade2 = 'A';
+  int myAge2 = 20;
+	//char myGrade2 = 'A';
  
-	cout << "Size of int " << sizeof(myAge2) << endl;
-	cout << "Size of char " << sizeof(myGrade2) << endl; 
+	//cout << "Size of int " << sizeof(myAge2) << endl;
+	//cout << "Size of char " << sizeof(myGrade2) << endl; 
 
+  int* agePtr = &myAge; 
 
+  cout << "Address of pointer " << agePtr << endl;
+
+  cout << "Data at memory address " << *agePtr << endl; 
+
+  int badNums2[5] = {4, 13, 14, 24, 34};
+
+  int* numArrayPtr = badNums2;
+
+  cout << "Address " << numArrayPtr << " Value " << *numArrayPtr << endl; 
+ 
+  cout << "Address " << badNums2 << " Value " << *badNums2 << endl;   
+
+  makeMeYoung(&myAge);
+
+  cout << "I'm " << myAge << " years old now" << endl;
+
+  int& ageRef = myAge;
+
+  cout << "myAge : " << myAge << endl; 
+
+  ageRef++;
+
+  cout << "myAge : " << myAge << endl; 
+
+  actYourAge(ageRef); 
+
+  cout << "myAge : " << myAge << endl; 
 
 ////////  
 
@@ -403,3 +440,4 @@ int fact(){
   return 0;
 }
 
+// End of C++ Review/Practice 
