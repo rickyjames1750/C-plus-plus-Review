@@ -327,7 +327,7 @@ if(! reader){
   // Read each character from the stream until end of file
   for(int i = 0; ! reader.eof(); i++){
 
-    // Get the next letter and output it 
+    // Get the next letter and outpgut it 
     reader.get(letter);
     cout << letter;
   }
@@ -354,8 +354,16 @@ if(! reader){
 
   }
 
-////////
-  
+// Pointers 
+  int myAge2 = 39;
+	char myGrade2 = 'A';
+ 
+	cout << "Size of int " << sizeof(myAge2) << endl;
+	cout << "Size of char " << sizeof(myGrade2) << endl; 
+
+
+
+////////  
 
 return 0;
 }
