@@ -14,6 +14,30 @@ void actYourAge(int& age){
   age = 22;
 }
 
+//Classes & Objects 
+class Animal{
+  //Attributes : height weight variables 
+  //capabilities : Run Eat functions / methods 
+
+  // Private 
+  private: 
+      int height;
+      int weight; 
+      string name; 
+
+      //Static variables 
+      static int numOfAnimals; 
+  public: 
+      int getHeight(){ return height; }
+      int getWeight(){ return weight; }
+      string getName(){ return name; }
+      void setWeight(int cm){ height = cm; }
+      void setName(int animalName){ height = animalName; }
+
+      void setAll(int, int, string);
+
+};
+
 int main(){
   // This is a C++ comment  
 
