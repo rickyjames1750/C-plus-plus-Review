@@ -36,6 +36,13 @@ class Animal{
 
       void setAll(int, int, string);
 
+      //Constructors 
+      Animal(int, int, string); 
+
+      ~Animal();
+
+      Animal();
+
 };
 
 int main(){
