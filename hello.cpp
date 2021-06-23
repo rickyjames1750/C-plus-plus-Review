@@ -43,7 +43,18 @@ class Animal{
 
       Animal();
 
+      static int getNumOfAnimals() { return numOfAnimals; }
+
+      void toString();
+
 };
+
+int Animal::numOfAnimals = 0;
+
+void Animal::setAll(int height, int weight, string name){
+
+  
+}
 
 int main(){
   // This is a C++ comment  
