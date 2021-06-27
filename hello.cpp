@@ -31,10 +31,11 @@ class Animal{
       int getHeight(){ return height; }
       int getWeight(){ return weight; }
       string getName(){ return name; }
-      void setWeight(int cm){ height = cm; }
-      void setName(int animalName){ height = animalName; }
+      void setHeight(int cm){ height = cm; }
+      void setWeight(int cm){ weight = cm; }
+      void setName(string animalName){ name = animalName; }
 
-      void setAll(int, int, string);
+      //void setAll(int, int, string);
 
       //Constructors 
       Animal(int, int, string); 
@@ -51,12 +52,55 @@ class Animal{
 
 int Animal::numOfAnimals = 0;
 
-void Animal::setAll(int height, int weight, string name){
+//void Animal::setAll(int height, int weight, string name){
 
-  
+  //this -> height = height; 
+  //this -> weight = weight; 
+  //this -> height = height; 
+  //Animal::numOfAnimals++;
+
+//}
+
+Animal::Animal(int height, int weight, string name){
+
+  this -> height = height; 
+  this -> weight = weight; 
+  this -> name = name; 
+  Animal::numOfAnimals++;
+}
+
+Animal::~Animal(){
+
+  cout << "Animal " << this -> name << " destroyed" << endl;
+
+}
+
+Animal::Animal(){
+
+  Animal::numOfAnimals++;
+}
+
+void Animal::toString(){
+
+  cout << this -> name << " is " << this -> weight << " kgs in weight" << endl; 
 }
 
 int main(){
+
+  // this 
+  Animal fred; 
+
+  fred.setHeight(33);
+  fred.setWeight(10);
+  fred.setName("Fred");
+
+  cout << fred.getName() << " is " << fred.getHeight() << " cms tall and " << fred.getWeight() << " kgs n weight" << endl; 
+
+  Animal tom(36, 15, "Tom");
+
+  cout << tom.getName() << " is " << tom.getHeight() << " cms tall and " << tom.getWeight() << " kgs n weight" << endl;
+
+
   // This is a C++ comment  
 
   cout << "Hello Sparks" << endl;
