@@ -131,7 +131,7 @@ class Dog2 : public Animal2{
       void getClass(){ cout << "I'm a Dog" << endl; }
 };
 
-class GermanShepard : public Dog{
+class GermanShepard : public Dog2{
     public:
         void getClass() { cout << "I'm a German Shepard" << endl; }
         void getDerived() { cout << "I'm an Animal and Dog" << endl; }
@@ -158,6 +158,29 @@ int main(){
   whatClassAreYou(dog2);
 
   //Polymorphism
+  Dog2 spot2;
+	GermanShepard max;
+ 
+	// A base class can call derived class methods as long as they exist 
+	// in the base class
+	Animal2 *ptrDog2 = &spot2;
+	Animal2 *ptrGShepard = &max;
+ 
+	// Call the method not overwritten in the super class Animal
+	ptrDog2 -> getFamily();
+ 
+	// Since getClass was overwritten in Dog call the Dog version
+	ptrDog2 -> getClass();
+ 
+	// Call to the super class
+	ptrGShepard -> getFamily();
+ 
+	// Call to the overwritten GermanShepard version
+	ptrGShepard -> getClass();
+
+  ptrGShepard -> getFamily();
+  ptrGShepard -> getClass();  
+ 
 
   // This is a C++ comment  
 
