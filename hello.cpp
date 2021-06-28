@@ -2,8 +2,12 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <string> // With this missing error will be "C++ requires a type specifier for all declarations" 
 
 using namespace std; 
+
+
+
 
 void makeMeYoung(int* age){
   cout << "I used to be " << *age << endl;
@@ -113,11 +117,47 @@ void Dog::toString(){
   cout << this -> getName() << " is " << this -> getHeight() << " cms tall and " << this -> getWeight() << " kgs in weight and says " << this -> sound;
 }
 
+
+// Virtual Methods part 1
+class Animal2{
+  public:
+    void getFamily() { cout << "We are animals" << endl; }
+    virtual void getClass() { cout << "I'm an Animal" << endl; }
+  
+};
+
+class Dog2 : public Animal2{
+    public:
+      void getClass(){ cout << "I'm a Dog" << endl; }
+};
+
+class GermanShepard : public Dog{
+    public:
+        void getClass() { cout << "I'm a German Shepard" << endl; }
+        void getDerived() { cout << "I'm an Animal and Dog" << endl; }
+
+};
+
+void whatClassAreYou(Animal2 *animal2){
+
+  animal2 -> getClass();
+}
+
 ////////////// INT MAIN ///////////////
 
 int main(){
 
-  
+  //Part of the Virtual Methods part 2 above 
+  Animal2 *animal2 = new Animal2;
+  Dog2 *dog2 =  new Dog2;  
+
+  animal2->getClass();
+  dog2->getClass();
+
+  whatClassAreYou(animal2);
+  whatClassAreYou(dog2);
+
+  //Polymorphism
 
   // This is a C++ comment  
 
