@@ -102,25 +102,22 @@ class Dog : public Animal{
 
 };
 
-//Dog::Dog(int height, int weight, )
+Dog::Dog(int height, int weight, string name, string bark) : 
+Animal(height, weight, name){
+
+  this -> sound = bark;
+}
+
+void Dog::toString(){
+
+  cout << this -> getName() << " is " << this -> getHeight() << " cms tall and " << this -> getWeight() << " kgs in weight and says " << this -> sound;
+}
 
 ////////////// INT MAIN ///////////////
 
 int main(){
 
-  // this 
-  Animal fred; 
-
-  fred.setHeight(33);
-  fred.setWeight(10);
-  fred.setName("Fred");
-
-  cout << fred.getName() << " is " << fred.getHeight() << " cms tall and " << fred.getWeight() << " kgs n weight" << endl; 
-
-  Animal tom(36, 15, "Tom");
-
-  cout << tom.getName() << " is " << tom.getHeight() << " cms tall and " << tom.getWeight() << " kgs n weight" << endl;
-
+  
 
   // This is a C++ comment  
 
@@ -507,9 +504,35 @@ if(! reader){
 
   cout << "myAge : " << myAge << endl; 
 
-////////  
+//////// 
 
-return 0;
+// this 
+  Animal fred; 
+
+  fred.setHeight(33);
+  fred.setWeight(10);
+  fred.setName("Fred");
+
+  cout << fred.getName() << " is " << fred.getHeight() << " cms tall and " << fred.getWeight() << " kgs n weight" << endl; 
+
+  Animal tom(36, 15, "Tom");
+
+  cout << tom.getName() << " is " << tom.getHeight() << " cms tall and " << tom.getWeight() << " kgs n weight" << endl;
+
+  Dog spot(38, 16, "Spot", "Woof");  
+
+  cout << "Number of Animals " << Animal::getNumOfAnimals() << endl;
+
+  spot.getSound();
+
+  tom.toString();
+  spot.toString();
+
+  spot.Animal::toString();
+
+  return 0;
+
+//return 0;
 }
 
 ////////////// OUTSIDE INT MAIN /////////////////
