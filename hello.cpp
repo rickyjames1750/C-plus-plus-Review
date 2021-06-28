@@ -85,6 +85,27 @@ void Animal::toString(){
   cout << this -> name << " is " << this -> weight << " kgs in weight" << endl; 
 }
 
+
+class Dog : public Animal{
+
+  private:
+      string sound = "Woof";
+
+  public: 
+      void getSound() { cout << sound << endl; } 
+
+      Dog(int, int, string, string);
+
+      Dog() : Animal() {}; 
+
+      void toString();
+
+};
+
+//Dog::Dog(int height, int weight, )
+
+////////////// INT MAIN ///////////////
+
 int main(){
 
   // this 
