@@ -138,6 +138,53 @@ class GermanShepard : public Dog2{
 
 };
 
+
+
+
+
+//// Start of Abstract Data Type 
+///////////////////////////////
+///////////////////////////
+
+// Animal 3 or Animal 2 or Animal 
+class Animal3{
+  public: 
+    virtual void makeSound(){ cout << "The Animal says grr" << endl; }
+    };
+class Dog3 : public Animal3{
+  public:
+      void makeSound(){ cout << "The Dog says woof" << endl; }
+
+};
+class Cat : public Animal3{
+  public: 
+      void makeSound(){ cout << "The Cat says meow" << endl; }
+
+};
+
+class Car{
+    public : 
+        virtual int getNumWheels() = 0;
+        virtual int getNumDoors() = 0;
+
+};
+
+class StationWagon : public Car{
+    public:
+        int getNumWheels(){ cout << "Station wagon has 4 wheels" << endl; }
+        int getNumDoors(){ cout << "Station wagon has 4 doors" << endl; }
+        StationWagon() { }
+        ~StationWagon();
+
+};
+///// End of Abstract Data Type 
+////////////////////////////
+///////////////////////////
+
+
+
+
+
 void whatClassAreYou(Animal2 *animal2){
 
   animal2 -> getClass();
@@ -146,6 +193,16 @@ void whatClassAreYou(Animal2 *animal2){
 ////////////// INT MAIN ///////////////
 
 int main(){
+  // Abstract Data Type run below 
+  Animal3* pCat = new Cat;
+  Animal3* pDog3 = new Dog3; 
+
+  pCat -> makeSound();
+  pDog3 -> makeSound();
+
+  Car* stationWagon = new StationWagon();
+
+  stationWagon -> getNumWheels();
 
   //Part of the Virtual Methods part 2 above 
   Animal2 *animal2 = new Animal2;
